@@ -47,6 +47,9 @@ npx prisma init
 npx prisma migrate dev --name init
 npx prisma generate
 
+## install Tailwindcss elements
+npm install @tailwindplus/elements
+
 File structure
 innohub-boilerplate/
 ├── app/
