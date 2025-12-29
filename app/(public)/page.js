@@ -26,7 +26,7 @@ export default function HomePage() {
         Get Started
       </a> */}
       <LogoCloudSection></LogoCloudSection>
-      <ContentSection></ContentSection>
+      <ContentSection id="About"></ContentSection>
       <FeatureSection></FeatureSection>
       <CTASection></CTASection>
       <BentoGridSection></BentoGridSection>

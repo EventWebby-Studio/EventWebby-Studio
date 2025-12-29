@@ -1,3 +1,6 @@
+"use client"
+import { motion } from "framer-motion"
+
 export default function BentoGridSection() {
   return (
     <div className="bg-gray-900 py-24 sm:py-32">
@@ -8,8 +11,12 @@ export default function BentoGridSection() {
         <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
           Everything you need to deploy your app
         </p>
+
+
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div className="relative lg:row-span-2">
+          
+          {/* bento 1 */}
+          <motion.div whileHover={{ scale: 1.05 }} className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
@@ -32,8 +39,10 @@ export default function BentoGridSection() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl"></div>
-          </div>
-          <div className="relative max-lg:row-start-1">
+          </motion.div>
+
+          {/* bento 2 */}
+          <motion.div whileHover={{ scale: 1.05 }} className="relative max-lg:row-start-1">
             <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-t-4xl"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
@@ -54,8 +63,10 @@ export default function BentoGridSection() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-t-4xl"></div>
-          </div>
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+          </motion.div>
+
+          {/* bento 3 */}
+          <motion.div whileHover={{ scale: 1.05 }} className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
             <div className="absolute inset-px rounded-lg bg-gray-800"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
@@ -76,8 +87,10 @@ export default function BentoGridSection() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15"></div>
-          </div>
-          <div className="relative lg:row-span-2">
+          </motion.div>
+
+          {/* bento 4 */}
+          <motion.div whileHover={{ scale: 1.05 }} className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-gray-800 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
@@ -106,7 +119,9 @@ export default function BentoGridSection() {
               </div>
             </div>
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
-          </div>
+          </motion.div>
+
+
         </div>
       </div>
     </div>

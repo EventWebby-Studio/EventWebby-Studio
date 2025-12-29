@@ -1,9 +1,9 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function PublicLayout({ children }) {
   return (
     <>
-    {/* navigation bar */}
+      {/* navigation bar */}
       {/* <nav className="border-b bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
           <Link href="/" className="font-bold text-xl text-black">
@@ -24,9 +24,9 @@ export default function PublicLayout({ children }) {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt=""
-                className="h-8 w-auto"
+                src="/EventFlow-logo-noBG.png"
+                alt="Logo"
+                className="h-20 w-auto"
               />
             </a>
           </div>
@@ -57,24 +57,29 @@ export default function PublicLayout({ children }) {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             <a href="#" className="text-sm/6 font-semibold text-white">
-              Product
+              Home
+            </a>
+            <a href="#About" className="text-sm/6 font-semibold text-white">
+              About
+            </a>
+            <a href="#" className="text-sm/6 font-semibold text-white">
+              Process
             </a>
             <a href="#" className="text-sm/6 font-semibold text-white">
               Features
             </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Marketplace
-            </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Company
-            </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/login" className="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></Link>
+            <Link href="/login" className="text-sm/6 font-semibold text-white">
+              Log in <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
         </nav>
         <el-dialog>
-          <dialog id="mobile-menu" className="backdrop:bg-transparent lg:hidden">
+          <dialog
+            id="mobile-menu"
+            className="backdrop:bg-transparent lg:hidden"
+          >
             <div tabIndex="0" className="fixed inset-0 focus:outline-none">
               <el-dialog-panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
                 <div className="flex items-center justify-between">
@@ -139,12 +144,12 @@ export default function PublicLayout({ children }) {
                       </a>
                     </div>
                     <div className="py-6">
-                      <a
-                        href="#"
+                      <Link
+                        href="/login"
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                       >
-                        Log in
-                      </a>
+                        Log in <span aria-hidden="true">&rarr;</span>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -154,13 +159,11 @@ export default function PublicLayout({ children }) {
         </el-dialog>
       </header>
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       <footer className="border-t mt-10 py-6 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} InviteFlow. All rights reserved.
       </footer>
     </>
-  )
+  );
 }

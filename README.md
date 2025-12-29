@@ -50,6 +50,9 @@ npx prisma generate
 ## install Tailwindcss elements
 npm install @tailwindplus/elements
 
+## Framer motion for page interation 
+npm install framer-motion
+
 File structure
 innohub-boilerplate/
 ├── app/

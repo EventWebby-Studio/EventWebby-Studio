@@ -29,7 +29,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label
-              for="first-name"
+              htmlFor="first-name"
               className="block text-sm/6 font-semibold text-white"
             >
               First name
@@ -39,14 +39,14 @@ export default function ContactSection() {
                 id="first-name"
                 type="text"
                 name="first-name"
-                autocomplete="given-name"
+                autoComplete="given-name"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
               />
             </div>
           </div>
           <div>
             <label
-              for="last-name"
+              htmlFor="last-name"
               className="block text-sm/6 font-semibold text-white"
             >
               Last name
@@ -56,14 +56,14 @@ export default function ContactSection() {
                 id="last-name"
                 type="text"
                 name="last-name"
-                autocomplete="family-name"
+                autoComplete="family-name"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
-              for="company"
+              htmlFor="company"
               className="block text-sm/6 font-semibold text-white"
             >
               Company
@@ -73,14 +73,14 @@ export default function ContactSection() {
                 id="company"
                 type="text"
                 name="company"
-                autocomplete="organization"
+                autoComplete="organization"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
-              for="email"
+              htmlFor="email"
               className="block text-sm/6 font-semibold text-white"
             >
               Email
@@ -90,14 +90,14 @@ export default function ContactSection() {
                 id="email"
                 type="email"
                 name="email"
-                autocomplete="email"
+                autoComplete="email"
                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
-              for="phone-number"
+              htmlFor="phone-number"
               className="block text-sm/6 font-semibold text-white"
             >
               Phone number
@@ -108,7 +108,7 @@ export default function ContactSection() {
                   <select
                     id="country"
                     name="country"
-                    autocomplete="country"
+                    autoComplete="country"
                     aria-label="Country"
                     className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-transparent py-2 pr-7 pl-3.5 text-base text-gray-400 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                   >
@@ -125,8 +125,8 @@ export default function ContactSection() {
                   >
                     <path
                       d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"
-                      fill-rule="evenodd"
+                      clipRule="evenodd"
+                      fillRule="evenodd"
                     />
                   </svg>
                 </div>
@@ -142,7 +142,7 @@ export default function ContactSection() {
           </div>
           <div className="sm:col-span-2">
             <label
-              for="message"
+              htmlFor="message"
               className="block text-sm/6 font-semibold text-white"
             >
               Message
@@ -169,7 +169,7 @@ export default function ContactSection() {
                 />
               </div>
             </div>
-            <label for="agree-to-policies" className="text-sm/6 text-gray-400">
+            <label htmlFor="agree-to-policies" className="text-sm/6 text-gray-400">
               By selecting this, you agree to our
               <a
                 href="#"

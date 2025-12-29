@@ -1,7 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
 export default function CTASection() {
   return (
     <div className="bg-gray-900">
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"
+      >
         <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <svg
             viewBox="0 0 1024 1024"
@@ -57,7 +65,7 @@ export default function CTASection() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
