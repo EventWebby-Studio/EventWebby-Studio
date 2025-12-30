@@ -37,15 +37,15 @@ export default function ContentSection() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base/7 font-semibold text-indigo-400">
-                Deploy faster
+                Event operations, reimagined
               </p>
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
-                A better workflow
+                Modern tools for modern events
               </h1>
               <p className="mt-6 text-xl/8 text-gray-300">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas.
+                Stop juggling spreadsheets, chats, and tools. EventFlow
+                centralizes everything your team needs to plan, manage, and
+                execute events — seamlessly.
               </p>
             </div>
           </div>
@@ -60,14 +60,14 @@ export default function ContentSection() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-400 lg:max-w-lg">
-              <p>
+              {/* <p>
                 Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
                 risus enim. Mattis mauris semper sed amet vitae sed turpis id.
                 Id dolor praesent donec est. Odio penatibus risus viverra tellus
                 varius sit neque erat velit. Faucibus commodo massa rhoncus,
                 volutpat. Dignissim sed eget risus enim. Mattis mauris semper
                 sed amet vitae sed turpis id.
-              </p>
+              </p> */}
               <ul role="list" className="mt-8 space-y-8 text-gray-400">
                 <li className="flex gap-x-3">
                   <svg
@@ -85,11 +85,11 @@ export default function ContentSection() {
                   </svg>
                   <span>
                     <strong className="font-semibold text-white">
-                      Push to deploy.
+                      Digital Invitations, Done Right.
                     </strong>{" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione.
+                    Skip printing and guessing numbers. Share one simple link
+                    with your guests — they get all the event details and RSVP
+                    instantly.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -108,10 +108,11 @@ export default function ContentSection() {
                   </svg>
                   <span>
                     <strong className="font-semibold text-white">
-                      SSL certificates.
+                      Built-in RSVP & Guest List.
                     </strong>{" "}
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo.
+                    All RSVPs are collected automatically in one place. Search
+                    guests by name and check them in on event day with a single
+                    click.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -131,30 +132,28 @@ export default function ContentSection() {
                   </svg>
                   <span>
                     <strong className="font-semibold text-white">
-                      Database backups.
+                      Custom Website for Your Event.
                     </strong>{" "}
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
+                    Your event, your story, your style. We design a website that
+                    matches your theme — whether it’s a wedding, launch, or
+                    company event.
                   </span>
                 </li>
               </ul>
               <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
+                Traditional event management relies on disconnected tools,
+                manual updates, and constant follow-ups. EventFlow replaces that
+                with a single source of truth — reducing errors, saving time,
+                and keeping everyone on the same page.
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-white">
-                No server? No problem.
+                Why teams switch to EventFlow?
               </h2>
               <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
-                consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod
-                vitae interdum mauris enim, consequat vulputate nibh. Maecenas
-                pellentesque id sed tellus mauris, ultrices mauris. Tincidunt
-                enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
+                Spreadsheets, chat threads, and last-minute changes slow events
+                down. EventFlow removes friction by unifying event data,
+                workflows, and communication — so you can focus on delivering
+                great events.
               </p>
             </div>
           </div>

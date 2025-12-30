@@ -17,24 +17,24 @@ const item = {
 
 const features = [
   {
-    title: "Push to deploy",
+    title: "Onboard & Discover",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+      "We start with a quick discussion to understand your event, your story, and what you need. We’ll confirm details, requirements, timeline, and proceed once everything is agreed.",
   },
   {
-    title: "Push to SSL certificates",
+    title: "Design & Build",
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet",
+      "We design and build a custom event website just for you — including event info, story, location, and RSVP form. You’ll receive a preview and one round of revision to make sure it feels right.",
   },
   {
-    title: "Simple queues",
+    title: "Launch & Share",
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+      "Once approved, we host and deploy your website live. You can immediately share the link with your guests and start collecting RSVPs.",
   },
   {
-    title: "Advanced security",
+    title: "Event Day & Warranty Support",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+      "On the event day, easily check in guests using the RSVP dashboard. If anything goes wrong, we’re on standby to fix it — covered all the way until your event ends.",
   },
 ];
 
@@ -44,15 +44,14 @@ export default function FeatureSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-indigo-400">
-            Deploy faster
+            A simple, stress-free process
           </h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
-            Everything you need to deploy your app
+            From idea to event day — we’ve got you
           </p>
           <p className="mt-6 text-lg/8 text-gray-300">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
+            No tech knowledge needed. Just tell us about your event — we’ll take
+            care of everything from setup to event day support.
           </p>
         </div>
 
@@ -69,7 +68,7 @@ export default function FeatureSection() {
               <motion.li
                 key={feature.title}
                 variants={item}
-                transition={{ duration: 1, ease: "easeOut" }}
+                // transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                 className="text-xl"
               >
                 <div className="relative pl-16">
@@ -103,6 +102,11 @@ export default function FeatureSection() {
               </motion.li>
             ))}
           </motion.ul>
+
+          <div className="relative rounded-full mt-10 px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+            No printing. No spreadsheets. No stress. Just a smooth, modern way
+            to invite and manage your guests.
+          </div>
         </div>
       </div>
     </div>

@@ -28,14 +28,14 @@ export default function HomePage() {
       <LogoCloudSection></LogoCloudSection>
       <ContentSection id="About"></ContentSection>
       <FeatureSection></FeatureSection>
-      <CTASection></CTASection>
+      {/* <CTASection></CTASection> */}
       <BentoGridSection></BentoGridSection>
-      <HeaderSection></HeaderSection>
+      {/* <HeaderSection></HeaderSection> */}
       <ContactSection></ContactSection>
-      <BlogSection></BlogSection>
+      {/* <BlogSection></BlogSection> */}
 
 
-      <RsvpForm></RsvpForm>
+      {/* <RsvpForm></RsvpForm> */}
     </section>
   )
 }

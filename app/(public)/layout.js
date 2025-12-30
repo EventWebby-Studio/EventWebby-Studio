@@ -161,7 +161,7 @@ export default function PublicLayout({ children }) {
 
       <main>{children}</main>
 
-      <footer className="border-t mt-10 py-6 text-center text-sm text-gray-500">
+      <footer className="border-t py-6 text-center text-sm text-gray-500 bg-gray-900">
         © {new Date().getFullYear()} InviteFlow. All rights reserved.
       </footer>
     </>
