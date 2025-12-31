@@ -25,17 +25,17 @@ export default function HomePage() {
       >
         Get Started
       </a> */}
-      <LogoCloudSection></LogoCloudSection>
+      {/* <LogoCloudSection></LogoCloudSection> */}
       <ContentSection id="About"></ContentSection>
+      <BentoGridSection></BentoGridSection>
       <FeatureSection></FeatureSection>
       {/* <CTASection></CTASection> */}
-      <BentoGridSection></BentoGridSection>
       {/* <HeaderSection></HeaderSection> */}
       <ContactSection></ContactSection>
       {/* <BlogSection></BlogSection> */}
 
 
-      {/* <RsvpForm></RsvpForm> */}
+      <RsvpForm></RsvpForm>
     </section>
   )
 }

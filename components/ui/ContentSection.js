@@ -1,7 +1,7 @@
 export default function ContentSection() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+      {/* <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           aria-hidden="true"
           className="absolute top-0 left-[max(50%,25rem)] h-256 w-512 -translate-x-1/2 mask-[radial-gradient(64rem_64rem_at_top,white,transparent)] stroke-gray-800"
@@ -31,18 +31,18 @@ export default function ContentSection() {
             strokeWidth="0"
           />
         </svg>
-      </div>
+      </div> */}
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base/7 font-semibold text-indigo-400">
+              <p className="text-base/7 font-semibold text-[#fad6a5]">
                 Event operations, reimagined
               </p>
-              <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
+              <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#0F172A] sm:text-5xl">
                 Modern tools for modern events
               </h1>
-              <p className="mt-6 text-xl/8 text-gray-300">
+              <p className="mt-6 text-xl/8 text-gray-800">
                 Stop juggling spreadsheets, chats, and tools. EventFlow
                 centralizes everything your team needs to plan, manage, and
                 execute events — seamlessly.
@@ -52,7 +52,7 @@ export default function ContentSection() {
         </div>
         <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
-            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+            src="/seats.jpg"
             alt=""
             className="w-3xl max-w-none rounded-xl bg-gray-800 shadow-xl ring-1 ring-white/10 sm:w-228"
           />
@@ -70,7 +70,7 @@ export default function ContentSection() {
               </p> */}
               <ul role="list" className="mt-8 space-y-8 text-gray-400">
                 <li className="flex gap-x-3">
-                  <svg
+                  {/* <svg
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     data-slot="icon"
@@ -82,9 +82,9 @@ export default function ContentSection() {
                       clipRule="evenodd"
                       fillRule="evenodd"
                     />
-                  </svg>
-                  <span>
-                    <strong className="font-semibold text-white">
+                  </svg> */}
+                  <span className="text-gray-500">
+                    <strong className="font-semibold text-[#fad6a5]">
                       Digital Invitations, Done Right.
                     </strong>{" "}
                     Skip printing and guessing numbers. Share one simple link
@@ -93,7 +93,7 @@ export default function ContentSection() {
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <svg
+                  {/* <svg
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     data-slot="icon"
@@ -105,9 +105,9 @@ export default function ContentSection() {
                       clipRule="evenodd"
                       fillRule="evenodd"
                     />
-                  </svg>
-                  <span>
-                    <strong className="font-semibold text-white">
+                  </svg> */}
+                  <span className="text-gray-500">
+                    <strong className="font-semibold text-[#fad6a5]">
                       Built-in RSVP & Guest List.
                     </strong>{" "}
                     All RSVPs are collected automatically in one place. Search
@@ -116,7 +116,7 @@ export default function ContentSection() {
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <svg
+                  {/* <svg
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     data-slot="icon"
@@ -129,9 +129,9 @@ export default function ContentSection() {
                       clipRule="evenodd"
                       fillRule="evenodd"
                     />
-                  </svg>
-                  <span>
-                    <strong className="font-semibold text-white">
+                  </svg> */}
+                  <span className="text-gray-500">
+                    <strong className="font-semibold text-[#fad6a5]">
                       Custom Website for Your Event.
                     </strong>{" "}
                     Your event, your story, your style. We design a website that
@@ -140,16 +140,16 @@ export default function ContentSection() {
                   </span>
                 </li>
               </ul>
-              <p className="mt-8">
+              <p className="mt-8 text-gray-800">
                 Traditional event management relies on disconnected tools,
                 manual updates, and constant follow-ups. EventFlow replaces that
                 with a single source of truth — reducing errors, saving time,
                 and keeping everyone on the same page.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-white">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-black">
                 Why teams switch to EventFlow?
               </h2>
-              <p className="mt-6">
+              <p className="mt-6 text-gray-800">
                 Spreadsheets, chat threads, and last-minute changes slow events
                 down. EventFlow removes friction by unifying event data,
                 workflows, and communication — so you can focus on delivering

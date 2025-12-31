@@ -20,36 +20,40 @@ const features = [
     title: "Onboard & Discover",
     description:
       "We start with a quick discussion to understand your event, your story, and what you need. We’ll confirm details, requirements, timeline, and proceed once everything is agreed.",
+    step: 1,
   },
   {
     title: "Design & Build",
     description:
       "We design and build a custom event website just for you — including event info, story, location, and RSVP form. You’ll receive a preview and one round of revision to make sure it feels right.",
+    step: 2,
   },
   {
     title: "Launch & Share",
     description:
       "Once approved, we host and deploy your website live. You can immediately share the link with your guests and start collecting RSVPs.",
+    step: 3,
   },
   {
     title: "Event Day & Warranty Support",
     description:
       "On the event day, easily check in guests using the RSVP dashboard. If anything goes wrong, we’re on standby to fix it — covered all the way until your event ends.",
+    step: 4,
   },
 ];
 
 export default function FeatureSection() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-400">
+          <h2 className="text-base/7 font-semibold text-[#ebdcab]">
             A simple, stress-free process
           </h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
+          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl lg:text-balance">
             From idea to event day — we’ve got you
           </p>
-          <p className="mt-6 text-lg/8 text-gray-300">
+          <p className="mt-6 text-lg/8 text-gray-800">
             No tech knowledge needed. Just tell us about your event — we’ll take
             care of everything from setup to event day support.
           </p>
@@ -57,7 +61,7 @@ export default function FeatureSection() {
 
         {/* below is a list of features */}
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <motion.ul
+          <motion.ol
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -72,10 +76,16 @@ export default function FeatureSection() {
                 className="text-xl"
               >
                 <div className="relative pl-16">
-                  <dt className="text-base/7 font-semibold text-white">
-                    <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500">
-                      {/* icon */}
-                      <svg
+                  <dt className="text-base/7 font-semibold text-[#ebdcab]">
+                    <div
+                      key={feature.step}
+                      className="flex w-10 h-10 items-center justify-center rounded-lg bg-[#ebdcab] text-white font-bold text-lg"
+                    >
+                      {feature.step}
+                    </div>
+                    {/* <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#ebdcab]"> */}
+                    {/* icon */}
+                    {/* <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -89,8 +99,8 @@ export default function FeatureSection() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
-                      </svg>
-                    </div>
+                      </svg> */}
+                    {/* </div> */}
                     {/* heading */}
                     {feature.title}
                   </dt>
@@ -101,9 +111,9 @@ export default function FeatureSection() {
                 </div>
               </motion.li>
             ))}
-          </motion.ul>
+          </motion.ol>
 
-          <div className="relative rounded-full mt-10 px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+          <div className="relative rounded-full mt-10 px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-black/10 hover:ring-white/20">
             No printing. No spreadsheets. No stress. Just a smooth, modern way
             to invite and manage your guests.
           </div>
