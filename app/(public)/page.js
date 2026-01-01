@@ -8,6 +8,7 @@ import BentoGridSection from "@/components/ui/BentoGridSection";
 import HeaderSection from "@/components/ui/HeaderSection";
 import ContactSection from "@/components/ui/ContactSection";
 import BlogSection from "@/components/ui/BlogSection";
+import CoreSection from "@/components/ui/CoreSection";
 
 export default function HomePage() {
   return (
@@ -29,9 +30,11 @@ export default function HomePage() {
       <ContentSection id="About"></ContentSection>
       <BentoGridSection></BentoGridSection>
       <FeatureSection></FeatureSection>
+      <CoreSection></CoreSection>
+      <ContactSection></ContactSection>
       {/* <CTASection></CTASection> */}
       {/* <HeaderSection></HeaderSection> */}
-      <ContactSection></ContactSection>
+      
       {/* <BlogSection></BlogSection> */}
 
 

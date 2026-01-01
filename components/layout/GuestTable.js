@@ -79,7 +79,7 @@ export default function GuestTable({ guests }) {
                 <td className="px-4 py-2 text-sm text-gray-600 hidden lg:table-cell">
                   {guest.createdAt ? new Date(guest.createdAt).toLocaleDateString() : "-"}
                 </td>
-                <td className="px-4 py-2 text-sm text-gray-600 space-x-2">
+                <td className="px-4 py-2 text-sm text-gray-600 space-x-2 space-y-2">
                   <button
                     className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
                     onClick={() => handleEdit(guest.id)}

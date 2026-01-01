@@ -16,7 +16,7 @@ export default function AdminLayout({ children }) {
         <h2 className="font-bold text-xl mb-6">Admin</h2>
         <nav className="space-y-3 flex flex-col">
           <Link href="/admin">Dashboard</Link>
-          <Link href="/admin/cms">CMS</Link>
+          <Link href="/admin/cms">Guest</Link>
           <Link href="/">logout</Link>
         </nav>
       </aside>

@@ -13,7 +13,7 @@ export default async function CMSPage() {
   return (
     <div>
       <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold text-black">Guest RSVP</h1>
+        <h1 className="text-2xl font-bold text-black mt-10 sm:mt-0">Guest RSVP</h1>
       </div>
 
 {/* imported guesttable from client component, this table display the guests detail in table format and able to edit, delete, checkin */}

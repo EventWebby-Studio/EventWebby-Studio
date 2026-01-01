@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
-    // bg-fixed gives the parallax effect
-    <div className="bg-[url('/eventflow-hero-bg.jpg')] bg-cover bg-center bg-fixed">
+    
+    <div className="bg-[url('/eventflow-hero-bg.jpg')] bg-cover bg-center">
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           aria-hidden="true"

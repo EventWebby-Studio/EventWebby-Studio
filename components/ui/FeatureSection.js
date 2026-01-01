@@ -44,16 +44,16 @@ const features = [
 
 export default function FeatureSection() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-[#F6F1E9] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-[#ebdcab]">
+          <h2 className="text-base/7 font-semibold text-[#CFA24D]">
             A simple, stress-free process
           </h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-black sm:text-5xl lg:text-balance">
+          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#3A2B1F] sm:text-5xl lg:text-balance">
             From idea to event day — we’ve got you
           </p>
-          <p className="mt-6 text-lg/8 text-gray-800">
+          <p className="mt-6 text-lg/8 text-[#4A433D]">
             No tech knowledge needed. Just tell us about your event — we’ll take
             care of everything from setup to event day support.
           </p>
@@ -76,16 +76,10 @@ export default function FeatureSection() {
                 className="text-xl"
               >
                 <div className="relative pl-16">
-                  <dt className="text-base/7 font-semibold text-[#ebdcab]">
-                    <div
-                      key={feature.step}
-                      className="flex w-10 h-10 items-center justify-center rounded-lg bg-[#ebdcab] text-white font-bold text-lg"
-                    >
-                      {feature.step}
-                    </div>
-                    {/* <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#ebdcab]"> */}
-                    {/* icon */}
-                    {/* <svg
+                  <dt className="text-center text-base/7 font-semibold text-[#B98A7C]">
+                    <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#7A8B6F]">
+                      {/* icon */}
+                      {/* <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -100,12 +94,18 @@ export default function FeatureSection() {
                           strokeLinejoin="round"
                         />
                       </svg> */}
-                    {/* </div> */}
+                      <div
+                        key={feature.step}
+                        className="flex w-10 h-10 items-center justify-center rounded-lg bg-[#7A8B6F] text-white font-bold text-lg"
+                      >
+                        {feature.step}
+                      </div>
+                    </div>
                     {/* heading */}
                     {feature.title}
                   </dt>
                   {/* paragraph text */}
-                  <dd className="mt-2 text-base/7 text-gray-400">
+                  <dd className="mt-2 text-base/7 text-[#4A433D]">
                     {feature.description}
                   </dd>
                 </div>
@@ -113,7 +113,7 @@ export default function FeatureSection() {
             ))}
           </motion.ol>
 
-          <div className="relative rounded-full mt-10 px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-black/10 hover:ring-white/20">
+          <div className="relative rounded-full mt-10 px-3 py-1 text-sm/6 text-[#B98A7C] ring-1 ring-black/10 hover:ring-white/20">
             No printing. No spreadsheets. No stress. Just a smooth, modern way
             to invite and manage your guests.
           </div>
