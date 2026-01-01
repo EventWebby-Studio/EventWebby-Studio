@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* <BlogSection></BlogSection> */}
 
 
-      <RsvpForm></RsvpForm>
+      {/* <RsvpForm></RsvpForm> */}
     </section>
   )
 }

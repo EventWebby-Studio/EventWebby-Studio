@@ -1,41 +1,88 @@
 import { prisma } from "@/lib/prisma"
 import bcrypt from "bcrypt"
+import { Prisma } from "@prisma/client"
 
+// API to add guest
 export async function POST(req) {
-  const { name, email, contact, guestCount, message } = await req.json()
+  try {
+    const body = await req.json()
+    const { name, email, contact, guestCount, message } = body
 
-  if (!name || !email || !contact || !guestCount) {
+    // Basic validation
+    if (!name || !email || !contact || !guestCount) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "All required fields must be filled"
+        }),
+        { status: 400 }
+      )
+    }
+
+    // Optional: validate guestCount is a number
+    const parsedGuestCount = parseInt(guestCount)
+    if (isNaN(parsedGuestCount) || parsedGuestCount <= 0) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Guest count must be a valid number"
+        }),
+        { status: 400 }
+      )
+    }
+
+    const guest = await prisma.guest.create({
+      data: {
+        name,
+        email,
+        contact,
+        guestCount: parsedGuestCount,
+        message
+      }
+    })
+
+    // Success response
     return new Response(
-      JSON.stringify({ message: "All fields are required" }),
-      { status: 400 }
+      JSON.stringify({
+        success: true,
+        message: "RSVP submitted successfully",
+        data: guest
+      }),
+      { status: 201 }
+    )
+
+  } catch (error) {
+    console.error("RSVP API Error:", error)
+
+    // Handle Prisma known errors (e.g. duplicate email)
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      if (error.code === "P2002") {
+        return new Response(
+          JSON.stringify({
+            success: false,
+            message: "This email has already RSVP’d"
+          }),
+          { status: 409 } // Conflict
+        )
+      }
+    }
+
+    // Generic server error
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: "Something went wrong. Please try again later."
+      }),
+      { status: 500 }
     )
   }
-
-  const res = await prisma.guest.create({
-    data: {
-      name,
-      email,
-      contact,
-      guestCount: parseInt(guestCount),
-      message
-    }
-  })
-
-  if(res){
-    console.log("API response: ", res);
-    return new Response(
-    JSON.stringify({ message: "Guest RSVP created" }),
-    { status: 201 }
-  )
-  }
-  
 }
 
 export async function GET(req) {
-    const guests = await prisma.guest.findMany()
-    return new Response(
-        JSON.stringify({ guests }),
-        { status: 200 }
-    )
+  const guests = await prisma.guest.findMany()
+  return new Response(
+    JSON.stringify({ guests }),
+    { status: 200 }
+  )
 }
 

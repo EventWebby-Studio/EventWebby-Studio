@@ -53,6 +53,9 @@ npm install @tailwindplus/elements
 ## Framer motion for page interation 
 npm install framer-motion
 
+## install toast to display error /success message
+npm install react-hot-toast
+
 File structure
 innohub-boilerplate/
 ├── app/
