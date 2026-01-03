@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     
     <div className="bg-[url('/eventflow-hero-bg.jpg')] bg-cover bg-center">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 pt-0 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -26,7 +26,7 @@ export default function HeroSection() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
               className="text-4xl font-bold"
             >
-              <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-whtite/10 hover:ring-black/20">
+              <div className="relative rounded-full px-3 py-1 text-sm/6 text-[#CFA24D] ring-1 ring-white/10 hover:ring-black/20">
                 Website ready in 2–3 weeks · Support until event day
               </div>
             </motion.div>
@@ -51,7 +51,7 @@ export default function HeroSection() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
               className="text-4xl font-bold"
             >
-              <p className="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">
+              <p className="mt-8 text-lg font-medium text-pretty text-[#F6F1E9] [text-shadow:2px_2px_4px_rgba(0,0,0,0.4)] sm:text-xl/8">
                 EventFlow Studio helps couples and businesses replace printed
                 invitations, spreadsheets, and manual check-ins with a custom
                 event website — complete with RSVP, guest management, and
@@ -69,13 +69,13 @@ export default function HeroSection() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-md animate-bounce bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-[#fad6a5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fad6a5]"
+                  className="rounded-md animate-bounce bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-[#CFA24D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fad6a5]"
                 >
-                  Build My Event Website
+                  Build My Event Website!
                 </a>
-                <a href="#" className="text-sm/6 font-semibold text-white">
+                {/* <a href="#" className="text-sm/6 font-semibold text-white">
                   Learn more <span aria-hidden="true">→</span>
-                </a>
+                </a> */}
               </div>
             </motion.div>
           </div>

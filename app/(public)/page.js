@@ -36,7 +36,7 @@ export default function HomePage() {
       {/* <ContentSection></ContentSection> */}
       {/* <BentoGridSection></BentoGridSection> */}
       <FeatureSection></FeatureSection>
-      <CoreSection></CoreSection>
+      {/* <CoreSection></CoreSection> */}
       <ContactSection></ContactSection>
       {/* <CTASection></CTASection> */}
       {/* <HeaderSection></HeaderSection> */}

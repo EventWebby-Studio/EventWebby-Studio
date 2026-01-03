@@ -1,17 +1,16 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
 export default function ContactSection() {
-
   const INITIAL_FORM_STATE = {
     name: "",
     email: "",
     contact: "",
     guestCount: "",
     message: "",
-  }
+  };
 
   // setup the form data state
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
@@ -26,8 +25,8 @@ export default function ContactSection() {
   };
 
   const resetForm = () => {
-    setFormData(INITIAL_FORM_STATE)
-  }
+    setFormData(INITIAL_FORM_STATE);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // stop page reload when submitting
@@ -38,35 +37,38 @@ export default function ContactSection() {
       body: JSON.stringify(formData),
     });
 
-    const result = await res.json()
+    const result = await res.json();
 
     if (!result.success) {
-      alert(result.message)
+      alert(result.message);
       // toast.error(result.message)
     } else {
-      alert(result.message)
+      alert(result.message);
       // toast.success(result.message)
-      resetForm()
+      resetForm();
     }
   };
 
   return (
-    <div id="contact" className="isolate bg-[url('/eventflow-hero-bg.jpg')] bg-cover px-6 py-24 sm:py-32 lg:px-8">
-      <div className="bg-white px-6 py-16 rounded-lg shadow-lg max-w-3xl mx-auto">
+    <div
+      id="contact"
+      className=" relative isolate bg-[url('/eventflow-hero-bg.jpg')] bg-cover px-6 py-24 sm:py-32 lg:px-8"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      <div className="max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-10">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-balance text-black sm:text-5xl">
+          <h2 className="text-3xl font-bold text-center text-[#3A2B1F] mb-2">
             RSVP NOW
           </h2>
-          <p className="mt-2 text-lg/8 text-gray-400">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          <p className="text-center text-gray-500 mb-6">
+            Let us know you’re coming!
           </p>
         </div>
 
         {/* RSVP Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="max-w-md mx-auto bg-white p-6 rounded shadow-md"
-        >
+        <form onSubmit={handleSubmit} className="px-10">
           <div className="mb-4">
             <label className="block text-gray-700">Name</label>
             <input
@@ -74,7 +76,7 @@ export default function ContactSection() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded rsvp-input"
+              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
               required
             />
           </div>
@@ -86,7 +88,7 @@ export default function ContactSection() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded rsvp-input"
+              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
               required
             />
           </div>
@@ -98,7 +100,7 @@ export default function ContactSection() {
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded rsvp-input"
+              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
 
@@ -110,7 +112,7 @@ export default function ContactSection() {
               min={1}
               value={formData.guestCount}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded rsvp-input"
+              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
 
@@ -121,19 +123,18 @@ export default function ContactSection() {
               rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded rsvp-input"
+              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D] h-24"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="w-full bg-[#CFA24D] hover:bg-[#b38e39] text-white font-semibold py-3 rounded-lg transition-colors duration-300"
           >
             Submit RSVP
           </button>
         </form>
       </div>
     </div>
-
   );
 }
