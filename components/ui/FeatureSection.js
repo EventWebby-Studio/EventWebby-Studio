@@ -44,7 +44,7 @@ const features = [
 
 export default function FeatureSection() {
   return (
-    <div className="bg-[#F6F1E9] py-24 sm:py-32">
+    <div id="process" className="bg-[#F6F1E9] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base/7 font-semibold text-[#CFA24D]">

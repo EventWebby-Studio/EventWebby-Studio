@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function BentoGridSection() {
   return (
-    <div className="bg-[#F6F1E9] py-24 sm:py-32">
+    <div id="features" className="bg-[#F6F1E9] py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-center text-base/7 font-semibold text-[#CFA24D]">
           Deploy faster

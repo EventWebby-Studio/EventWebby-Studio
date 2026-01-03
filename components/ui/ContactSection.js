@@ -51,7 +51,7 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="isolate bg-[url('/eventflow-hero-bg.jpg')] bg-cover px-6 py-24 sm:py-32 lg:px-8">
+    <div id="contact" className="isolate bg-[url('/eventflow-hero-bg.jpg')] bg-cover px-6 py-24 sm:py-32 lg:px-8">
       <div className="bg-white px-6 py-16 rounded-lg shadow-lg max-w-3xl mx-auto">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight text-balance text-black sm:text-5xl">

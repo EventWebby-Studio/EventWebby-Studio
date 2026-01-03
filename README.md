@@ -56,6 +56,10 @@ npm install framer-motion
 ## install toast to display error /success message
 npm install react-hot-toast
 
+## to use scss u need npm install smth
+npm install sass
+
+
 File structure
 innohub-boilerplate/
 ├── app/

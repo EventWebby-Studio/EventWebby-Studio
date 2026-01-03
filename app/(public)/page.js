@@ -9,11 +9,17 @@ import HeaderSection from "@/components/ui/HeaderSection";
 import ContactSection from "@/components/ui/ContactSection";
 import BlogSection from "@/components/ui/BlogSection";
 import CoreSection from "@/components/ui/CoreSection";
+import WordScrollingSection from "@/components/ui/WordScrollingSection";
+import AboutSection from "@/components/ui/AboutSection";
+import GridSection from "@/components/ui/GridSection";
 
 export default function HomePage() {
   return (
     <section className="text-center">
       <HeroSection></HeroSection>
+      <WordScrollingSection></WordScrollingSection>
+      <AboutSection></AboutSection>
+      <GridSection></GridSection>
       {/* <h1 className="text-5xl font-bold mb-4">
         Build a RSVP event website Faster with InviteFlow
       </h1>
@@ -27,14 +33,14 @@ export default function HomePage() {
         Get Started
       </a> */}
       {/* <LogoCloudSection></LogoCloudSection> */}
-      <ContentSection id="About"></ContentSection>
-      <BentoGridSection></BentoGridSection>
+      {/* <ContentSection></ContentSection> */}
+      {/* <BentoGridSection></BentoGridSection> */}
       <FeatureSection></FeatureSection>
       <CoreSection></CoreSection>
       <ContactSection></ContactSection>
       {/* <CTASection></CTASection> */}
       {/* <HeaderSection></HeaderSection> */}
-      
+
       {/* <BlogSection></BlogSection> */}
 
 

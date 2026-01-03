@@ -1,6 +1,16 @@
+"use client"
 import Link from "next/link";
 
 export default function PublicLayout({ children }) {
+
+  // handles the closing of menu
+  const handleNavLinkClick = () => {
+    const dialog = document.getElementById("mobile-menu")
+    if (!dialog) return
+    const closeBtn = dialog.querySelector('[command="close"]')
+    closeBtn?.click()
+  }
+
   return (
     <>
       {/* navigation bar */}
@@ -59,14 +69,17 @@ export default function PublicLayout({ children }) {
             <a href="#" className="text-sm/6 font-semibold text-white">
               Home
             </a>
-            <a href="#About" className="text-sm/6 font-semibold text-white">
+            <a href="#about" className="text-sm/6 font-semibold text-white">
               About
             </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
+            <a href="#features" className="text-sm/6 font-semibold text-white">
+              Features
+            </a>
+            <a href="#process" className="text-sm/6 font-semibold text-white">
               Process
             </a>
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Features
+            <a href="#contact" className="text-sm/6 font-semibold text-white">
+              Contact
             </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -75,6 +88,8 @@ export default function PublicLayout({ children }) {
             </Link>
           </div>
         </nav>
+
+        {/* Mobile app hamburger menu */}
         <el-dialog>
           <dialog
             id="mobile-menu"
@@ -86,9 +101,9 @@ export default function PublicLayout({ children }) {
                   <a href="#" className="-m-1.5 p-1.5">
                     <span className="sr-only">Your Company</span>
                     <img
-                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                      src="/EventFlow-logo-noBG.png"
                       alt=""
-                      className="h-8 w-auto"
+                      className="h-20 w-auto"
                     />
                   </a>
                   <button
@@ -121,26 +136,37 @@ export default function PublicLayout({ children }) {
                       <a
                         href="#"
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                        onClick={handleNavLinkClick}
                       >
-                        Product
+                        Home
                       </a>
                       <a
-                        href="#"
+                        href="#about"
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                        onClick={handleNavLinkClick}
+                      >
+                        About
+                      </a>
+                      <a
+                        href="#features"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                        onClick={handleNavLinkClick}
                       >
                         Features
                       </a>
                       <a
-                        href="#"
+                        href="#process"
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                        onClick={handleNavLinkClick}
                       >
-                        Marketplace
+                        Process
                       </a>
                       <a
-                        href="#"
+                        href="#contact"
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                        onClick={handleNavLinkClick}
                       >
-                        Company
+                        Contact
                       </a>
                     </div>
                     <div className="py-6">

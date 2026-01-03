@@ -1,0 +1,21 @@
+.paragraph {
+  font-size: clamp(20px, 6vw, 50px);
+  font-weight: bold;
+  color: #4A433D;
+  max-width: 1200px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1;
+
+  .word {
+    margin-right: 12px;
+    margin-top: 12px;
+    position: relative;
+
+    .shadow {
+      position: absolute;
+      opacity: 0.3;
+    }
+  }
+}
