@@ -59,6 +59,10 @@ npm install react-hot-toast
 ## to use scss u need npm install smth
 npm install sass
 
+## .env file
+DATABASE_URL="file:./prisma/dev.db"
+NEXTAUTH_SECRET="dev-secret-change-later"
+NEXTAUTH_URL="http://localhost:3000"
 
 File structure
 innohub-boilerplate/
@@ -752,3 +756,23 @@ git push -u origin main
 
 
 🎉 Done. You now have your agency boilerplate repo.
+
+
+
+## Supabase Postgres x Prisma setup for hosted DB 
+in .env file, after local development all okay, change # DATABASE_URL="file:./prisma/dev.db" to the Supabase connection String under ORMS tab
+DATABASE_URL="postgresql://postgres.vqatmmzdzpruutrvfzyf:Tyz87955747!@aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres"
+
+after u got ur conenction string go to prisma/schema.prisma file and update the datasource to 'postgresql' instead of 'sqlite'
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+once all set, just run npx prisma db push, and check that the table is created in Supabase.
+npx prisma db push
+

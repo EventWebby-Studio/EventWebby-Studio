@@ -52,7 +52,7 @@ export default function HeroSection() {
               className="text-4xl font-bold"
             >
               <p className="mt-8 text-lg font-medium text-pretty text-[#F6F1E9] [text-shadow:2px_2px_4px_rgba(0,0,0,0.4)] sm:text-xl/8">
-                EventFlow Studio helps couples and businesses replace printed
+                EventWebby helps couples and businesses replace printed
                 invitations, spreadsheets, and manual check-ins with a custom
                 event website — complete with RSVP, guest management, and
                 seamless attendance tracking.{" "}

@@ -12,12 +12,14 @@ import CoreSection from "@/components/ui/CoreSection";
 import WordScrollingSection from "@/components/ui/WordScrollingSection";
 import AboutSection from "@/components/ui/AboutSection";
 import GridSection from "@/components/ui/GridSection";
+import ScrollJackedSection from "@/components/ui/ScrollJackedSection";
 
 export default function HomePage() {
   return (
     <section className="text-center">
       <HeroSection></HeroSection>
-      <WordScrollingSection></WordScrollingSection>
+      <ScrollJackedSection></ScrollJackedSection>
+      {/* <WordScrollingSection></WordScrollingSection> */}
       <AboutSection></AboutSection>
       <GridSection></GridSection>
       {/* <h1 className="text-5xl font-bold mb-4">

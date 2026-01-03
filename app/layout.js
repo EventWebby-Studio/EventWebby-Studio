@@ -1,8 +1,8 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "EventFlow Studio Website",
-  description: "EventFlow Studio builds custom event websites with RSVP and guest check-in. No printing, no spreadsheets — just a smooth, stress-free event experience."
+  title: "EventWebby Creation Website",
+  description: "EventWebby Creation builds custom event websites with RSVP and guest check-in. No printing, no spreadsheets — just a smooth, stress-free event experience."
 }
 
 export default function RootLayout({ children }) {

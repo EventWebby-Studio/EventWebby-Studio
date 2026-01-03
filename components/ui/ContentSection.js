@@ -13,7 +13,7 @@ export default function ContentSection() {
                 Modern tools for modern events
               </h1>
               <p className="mt-6 text-xl/8 text-[#4A433D]">
-                Stop juggling spreadsheets, chats, and tools. EventFlow
+                Stop juggling spreadsheets, chats, and tools. EventWebby
                 centralizes everything your team needs to plan, manage, and
                 execute events — seamlessly.
               </p>
@@ -69,16 +69,16 @@ export default function ContentSection() {
               </ul>
               <p className="mt-8 text-gray-800">
                 Traditional event management relies on disconnected tools,
-                manual updates, and constant follow-ups. EventFlow replaces that
+                manual updates, and constant follow-ups. EventWebby replaces that
                 with a single source of truth — reducing errors, saving time,
                 and keeping everyone on the same page.
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-[#3A2B1F]">
-                Why teams switch to EventFlow?
+                Why teams switch to EventWebby?
               </h2>
               <p className="mt-6 text-[#4A433D]">
                 Spreadsheets, chat threads, and last-minute changes slow events
-                down. EventFlow removes friction by unifying event data,
+                down. EventWebby removes friction by unifying event data,
                 workflows, and communication — so you can focus on delivering
                 great events.
               </p>

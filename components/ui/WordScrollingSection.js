@@ -6,7 +6,7 @@ import styles from "../../page.module.scss";
 export default function WordScrollingSection() {
   //set the paragraph value
   const value =
-    "Experience the future of event management with our cutting-edge RSVP website boilerplate. Seamlessly customizable and packed with features, it's designed to make your event planning effortless and efficient.";
+    "EventWebby is a creative studio that designs custom event websites — built to tell your story, guide your guests, and simplify reservations. From a beautiful landing page and event narrative to venue details and a seamless RSVP system, we help you create a digital experience that flows effortlessly from invitation to attendance.";
 
   const element = useRef(null);
 

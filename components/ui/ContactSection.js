@@ -76,7 +76,7 @@ export default function ContactSection() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
+              className="w-full mb-4 p-3 text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
               required
             />
           </div>
@@ -88,7 +88,7 @@ export default function ContactSection() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
+              className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
               required
             />
           </div>
@@ -100,7 +100,7 @@ export default function ContactSection() {
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
+              className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
 
@@ -112,7 +112,7 @@ export default function ContactSection() {
               min={1}
               value={formData.guestCount}
               onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
+              className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
 
@@ -123,13 +123,13 @@ export default function ContactSection() {
               rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D] h-24"
+              className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D] h-24"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#CFA24D] hover:bg-[#b38e39] text-white font-semibold py-3 rounded-lg transition-colors duration-300"
+            className="w-full bg-[#CFA24D] text-black hover:bg-[#b38e39] text-white font-semibold py-3 rounded-lg transition-colors duration-300"
           >
             Submit RSVP
           </button>
