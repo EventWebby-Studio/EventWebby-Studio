@@ -776,3 +776,4 @@ datasource db {
 once all set, just run npx prisma db push, and check that the table is created in Supabase.
 npx prisma db push
 
+test commit
