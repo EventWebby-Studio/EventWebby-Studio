@@ -129,10 +129,10 @@ export default function AboutSection() {
         {/* LEFT: Full-height image */}
         <motion.div
           className="relative h-[60vh] lg:h-auto"
-          initial={{ x: -100, opacity: 0 }}      // start off-screen
-          whileInView={{ x: 0, opacity: 1 }}     // animate when visible
-          viewport={{ once: true, amount: 0.3 }} // trigger when 30% visible
-          transition={{ duration: 2, ease: "linear" }}
+          // initial={{ opacity: 0, y: 30 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 1, ease: "easeOut" }}
         >
           <img
             src="/seats.jpg"
@@ -144,9 +144,14 @@ export default function AboutSection() {
         {/* RIGHT: Content centered */}
         <div className="flex items-center px-6 py-16 lg:px-16">
           <div className="max-w-lg">
-            <p className="text-base font-semibold text-[#B98A7C]">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="text-base font-semibold text-[#3A2B1F]">
               Event operations, reimagined
-            </p>
+            </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -158,22 +163,37 @@ export default function AboutSection() {
                 Modern website for modern events
               </h1>
             </motion.div>
-            <p className="mt-6 text-xl text-[#4A433D]">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.4 }} 
+              className="mt-6 text-xl text-[#4A433D]">
               Stop juggling spreadsheets, chats, and tools. EventWebby
               centralizes everything your team needs to plan, manage, and
               execute events — seamlessly.
-            </p>
+            </motion.p>
 
-            <h2 className="mt-16 text-2xl font-bold text-[#3A2B1F]">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+              className="mt-16 text-2xl font-bold text-[#3A2B1F]">
               Why events switch to EventWebby?
-            </h2>
+            </motion.h2>
 
-            <p className="mt-6 text-[#4A433D]">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+              className="mt-6 text-[#4A433D]">
               Spreadsheets, chat threads, and last-minute changes slow events
               down. EventWebby removes friction by unifying event data,
               workflows, and communication — so you can focus on delivering
               great events.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function GridSection() {
         {/* 3 by 2  */}
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           {features.map((feature) => (
-            <motion.div key={feature.title} whileHover={{ scale: 1.05 }} className="relative">
+            <motion.div key={feature.title} whileHover={{ scale: 1.1 }} className="relative">
               <div className="relative rounded-lg bg-[#7A8B6F]/20 p-6 h-50">
                 <div className="flex flex-col">
                   {/* Icon */}

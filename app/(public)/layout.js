@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function PublicLayout({ children }) {
   // handles the closing of menu
@@ -26,10 +27,16 @@ export default function PublicLayout({ children }) {
           </div>
         </div>
       </nav> */}
-      <header className="absolute inset-x-0 top-0 z-50">
+
+      <motion.header
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-end lg:justify-center w-[90%] max-w-5xl px-6 py-4 rounded-2xl bg-white/30 backdrop-blur-xs shadow-lg">
+          className="fixed top-6 -right-6 lg:left-1/2 -translate-x-1/2 z-50 flex items-center justify-end lg:justify-center w-auto lg:w-[80%] max-w-5xl px-6 py-4 rounded-2xl bg-white/30 backdrop-blur-xs shadow-lg">
           {/* <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <img
@@ -186,7 +193,7 @@ export default function PublicLayout({ children }) {
             </div>
           </dialog>
         </el-dialog>
-      </header>
+      </motion.header>
 
       <main>{children}</main>
 

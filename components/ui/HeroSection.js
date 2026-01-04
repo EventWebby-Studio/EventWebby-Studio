@@ -1,9 +1,25 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 export default function HeroSection() {
+  const { scrollY } = useScroll();
+
+  // Parallax movement (subtle)
+  const y = useTransform(scrollY, [0, 600], [0, 180]);
+
   return (
-    
-    <div className="bg-[url('/eventflow-hero-bg.jpg')] bg-cover bg-center">
+
+    <section className="relative overflow-hidden">
+      {/* PARALLAX BACKGROUND */}
+      <motion.div
+        aria-hidden
+        className="absolute inset-0 bg-[url('/eventflow-hero-bg.jpg')] bg-cover bg-center will-change-transform"
+        style={{ y }}
+      />
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* CONTENT */}
       <div className="relative isolate px-6 pt-0 lg:px-8">
         <div
           aria-hidden="true"
@@ -17,7 +33,7 @@ export default function HeroSection() {
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
           ></div> */}
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-50 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -93,6 +109,11 @@ export default function HeroSection() {
           ></div> */}
         </div>
       </div>
-    </div>
+
+
+
+
+
+    </section>
   );
 }

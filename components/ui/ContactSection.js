@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 export default function ContactSection() {
-  
+
   const INITIAL_FORM_STATE = {
     name: "",
     email: "",
@@ -70,6 +70,7 @@ export default function ContactSection() {
 
         {/* RSVP Form */}
         <form onSubmit={handleSubmit} className="px-10">
+          {/* Name input */}
           <div className="mb-4">
             <label className="block text-gray-700">Name</label>
             <input
@@ -81,7 +82,7 @@ export default function ContactSection() {
               required
             />
           </div>
-
+          {/* Email input */}
           <div className="mb-4">
             <label className="block text-gray-700">Email</label>
             <input
@@ -93,7 +94,7 @@ export default function ContactSection() {
               required
             />
           </div>
-
+          {/* Contact input */}
           <div className="mb-4">
             <label className="block text-gray-700">Contact</label>
             <input
@@ -104,7 +105,7 @@ export default function ContactSection() {
               className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
-
+          {/* Guest input */}
           <div className="mb-4">
             <label className="block text-gray-700">Number of Guests</label>
             <input
@@ -116,7 +117,7 @@ export default function ContactSection() {
               className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />
           </div>
-
+          {/* Message input */}
           <div className="mb-4">
             <label className="block text-gray-700">Message</label>
             <textarea
