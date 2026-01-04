@@ -9,7 +9,6 @@ export default function ContactSection() {
     name: "",
     email: "",
     contact: "",
-    guestCount: "",
     message: "",
   };
 
@@ -32,7 +31,7 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // stop page reload when submitting
 
-    const res = await fetch("/api/guest", {
+    const res = await fetch("/api/client", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -101,18 +100,6 @@ export default function ContactSection() {
               type="tel"
               name="contact"
               value={formData.contact}
-              onChange={handleChange}
-              className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
-            />
-          </div>
-          {/* Guest input */}
-          <div className="mb-4">
-            <label className="block text-gray-700">Number of Guests</label>
-            <input
-              type="number"
-              name="guestCount"
-              min={1}
-              value={formData.guestCount}
               onChange={handleChange}
               className="w-full mb-4 p-3 rounded-lg text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#CFA24D]"
             />

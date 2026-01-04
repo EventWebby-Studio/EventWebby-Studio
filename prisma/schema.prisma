@@ -1,5 +1,5 @@
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -15,14 +15,13 @@ model User {
   createdAt DateTime @default(now())
 }
 
-model Guest {
+model Client {
   id        String     @id @default(uuid())
   name     String
   email      String     @unique
   contact   String      @unique
-  guestCount Int?
   message    String?
-  checkIn    Boolean   @default(false)
+  projectAcceptance    Boolean   @default(false)
   createdAt DateTime   @default(now())
 }
 

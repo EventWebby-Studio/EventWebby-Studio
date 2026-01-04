@@ -6,10 +6,10 @@ import { Prisma } from "@prisma/client"
 export async function POST(req) {
   try {
     const body = await req.json()
-    const { name, email, contact, guestCount, message } = body
+    const { name, email, contact, message } = body
 
     // Basic validation
-    if (!name || !email || !contact || !guestCount) {
+    if (!name || !email || !contact) {
       return new Response(
         JSON.stringify({
           success: false,
@@ -19,24 +19,11 @@ export async function POST(req) {
       )
     }
 
-    // Optional: validate guestCount is a number
-    const parsedGuestCount = parseInt(guestCount)
-    if (isNaN(parsedGuestCount) || parsedGuestCount <= 0) {
-      return new Response(
-        JSON.stringify({
-          success: false,
-          message: "Guest count must be a valid number"
-        }),
-        { status: 400 }
-      )
-    }
-
-    const guest = await prisma.guest.create({
+    const guest = await prisma.client.create({
       data: {
         name,
         email,
         contact,
-        guestCount: parsedGuestCount,
         message
       }
     })
@@ -45,7 +32,7 @@ export async function POST(req) {
     return new Response(
       JSON.stringify({
         success: true,
-        message: "RSVP submitted successfully",
+        message: "Interest form submitted successfully",
         data: guest
       }),
       { status: 201 }
@@ -60,7 +47,7 @@ export async function POST(req) {
         return new Response(
           JSON.stringify({
             success: false,
-            message: "This email has already RSVP’d"
+            message: "This email/contact has already existed"
           }),
           { status: 409 } // Conflict
         )
@@ -79,9 +66,9 @@ export async function POST(req) {
 }
 
 export async function GET(req) {
-  const guests = await prisma.guest.findMany()
+  const clients = await prisma.client.findMany()
   return new Response(
-    JSON.stringify({ guests }),
+    JSON.stringify({ clients }),
     { status: 200 }
   )
 }

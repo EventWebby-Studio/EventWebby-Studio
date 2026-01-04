@@ -1,23 +1,23 @@
 import { prisma } from "../../../../lib/prisma";
 import Link from "next/link";
-import GuestTable from "../../../../components/layout/GuestTable";
+import ClientsTable from "../../../../components/layout/ClientsTable";
 
 export default async function CMSPage() {
 
-  const guests = await prisma.guest.findMany({
+  const clients = await prisma.client.findMany({
     orderBy: { createdAt: "desc" },
   });
 
-  console.log(guests);
+  console.log(clients);
 
   return (
     <div>
       <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold text-black mt-10 sm:mt-0">Guest RSVP</h1>
+        <h1 className="text-2xl font-bold text-black mt-10 sm:mt-0">Client Interest Application</h1>
       </div>
 
 {/* imported guesttable from client component, this table display the guests detail in table format and able to edit, delete, checkin */}
-      <GuestTable guests={guests} />
+      <ClientsTable clients={clients} />
     </div>
   );
 }

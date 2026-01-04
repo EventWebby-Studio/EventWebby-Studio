@@ -1,37 +1,37 @@
 "use client";
 import { useState, useMemo } from "react";
 
-export default function GuestTable({ guests }) {
-  const [guestList, setGuestList] = useState(guests);
+export default function ClientsTable({ clients }) {
+  const [clientList, setClientList] = useState(clients);
   const [search, setSearch] = useState("");
 
-  // Filtered guests based on search
-  const filteredGuests = useMemo(() => {
-    if (!search) return guestList;
+  // Filtered clients based on search
+  const filteredClients = useMemo(() => {
+    if (!search) return clientList;
     const lowerSearch = search.toLowerCase();
-    return guestList.filter(
-      (guest) =>
-        guest.name.toLowerCase().includes(lowerSearch) ||
-        guest.email.toLowerCase().includes(lowerSearch) ||
-        (guest.contact && guest.contact.toLowerCase().includes(lowerSearch))
+    return clientList.filter(
+      (client) =>
+        client.name.toLowerCase().includes(lowerSearch) ||
+        client.email.toLowerCase().includes(lowerSearch) ||
+        (client.contact && client.contact.toLowerCase().includes(lowerSearch))
     );
-  }, [search, guestList]);
+  }, [search, clientList]);
 
   const handleEdit = (id) => console.log("Edit", id);
 
   const handleDelete = async (id) => {
-    await fetch(`/api/guest/${id}`, { method: "DELETE" });
-    setGuestList((prev) => prev.filter((g) => g.id !== id));
+    await fetch(`/api/client/${id}`, { method: "DELETE" });
+    setClientList((prev) => prev.filter((g) => g.id !== id));
   };
 
-  const handleCheckIn = async (id) => {
-    const res = await fetch(`/api/guest/${id}`, {
+  const handleprojectAcceptance = async (id) => {
+    const res = await fetch(`/api/client/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ checkIn: true }),
+      body: JSON.stringify({ projectAcceptance: true }),
     });
-    const updatedGuest = await res.json();
-    setGuestList((prev) => prev.map((g) => (g.id === id ? updatedGuest : g)));
+    const updatedClient = await res.json();
+    setClientList((prev) => prev.map((g) => (g.id === id ? updatedClient : g)));
   };
 
   return (
@@ -56,52 +56,50 @@ export default function GuestTable({ guests }) {
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700">Name</th>
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700">Email</th>
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 hidden sm:table-cell">Phone</th>
-              <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 hidden md:table-cell">Guest Count</th>
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 hidden md:table-cell">Remarks</th>
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 hidden lg:table-cell">RSVP at</th>
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-700">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {filteredGuests.map((guest, index) => (
+            {filteredClients.map((client, index) => (
               <tr
-                key={guest.id}
+                key={client.id}
                 className={`${
-                  guest.checkIn ? "bg-green-100 hover:bg-green-200" : "hover:bg-gray-50"
+                  client.projectAcceptance ? "bg-green-100 hover:bg-green-200" : "hover:bg-gray-50"
                 }`}
               >
                 <td className="px-4 py-2 text-sm text-gray-600">{index + 1}</td>
-                <td className="px-4 py-2 text-sm text-gray-600">{guest.name}</td>
-                <td className="px-4 py-2 text-sm text-gray-600">{guest.email}</td>
-                <td className="px-4 py-2 text-sm text-gray-600 hidden sm:table-cell">{guest.contact || "-"}</td>
-                <td className="px-4 py-2 text-sm text-gray-600 hidden md:table-cell">{guest.guestCount || 0}</td>
-                <td className="px-4 py-2 text-sm text-gray-600 hidden md:table-cell">{guest.message || "-"}</td>
+                <td className="px-4 py-2 text-sm text-gray-600">{client.name}</td>
+                <td className="px-4 py-2 text-sm text-gray-600">{client.email}</td>
+                <td className="px-4 py-2 text-sm text-gray-600 hidden sm:table-cell">{client.contact || "-"}</td>
+                <td className="px-4 py-2 text-sm text-gray-600 hidden md:table-cell">{client.message || "-"}</td>
                 <td className="px-4 py-2 text-sm text-gray-600 hidden lg:table-cell">
-                  {guest.createdAt ? new Date(guest.createdAt).toLocaleDateString() : "-"}
+                  {client.createdAt ? new Date(client.createdAt).toLocaleDateString() : "-"}
                 </td>
                 <td className="px-4 py-2 text-sm text-gray-600 space-x-2 space-y-2">
                   <button
                     className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-                    onClick={() => handleEdit(guest.id)}
+                    onClick={() => handleEdit(client.id)}
                   >
                     Edit
                   </button>
                   <button
                     className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                    onClick={() => handleDelete(guest.id)}
+                    onClick={() => handleDelete(client.id)}
                   >
                     Delete
                   </button>
                   <button
                     className={`px-3 py-1 rounded text-white ${
-                      guest.checkIn
+                      client.projectAcceptance
                         ? "bg-gray-400 cursor-not-allowed"
                         : "bg-green-500 hover:bg-green-600"
                     }`}
-                    onClick={() => handleCheckIn(guest.id)}
-                    disabled={guest.checkIn}
+                    onClick={() => handleprojectAcceptance(client.id)}
+                    disabled={client.projectAcceptance}
                   >
-                    {guest.checkIn ? "Checked In" : "Check-In"}
+                    {client.projectAcceptance ? "Checked In" : "Check-In"}
                   </button>
                 </td>
               </tr>

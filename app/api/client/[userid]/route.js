@@ -6,7 +6,7 @@ export async function DELETE(req, { params }) {
   console.log("userid deleting: " + userid);
 
   //delete guest from table
-  const res = await prisma.guest.delete({
+  const res = await prisma.client.delete({
     where: { id: userid },
   });
 
@@ -14,7 +14,7 @@ export async function DELETE(req, { params }) {
 
   if (res) {
     return new Response(
-      JSON.stringify({ message: "Guest deleted successfully" }),
+      JSON.stringify({ message: "Client deleted successfully" }),
       { status: 200 }
     );
   }
@@ -27,9 +27,9 @@ export async function DELETE(req, { params }) {
 export async function PATCH(req, { params }) {
   const { userid } = await params;
 
-  const res = await prisma.guest.update({
+  const res = await prisma.client.update({
     where: { id: userid },
-    data: { checkIn: true },
+    data: { projectAcceptance: true },
   });
 
   if (res) {

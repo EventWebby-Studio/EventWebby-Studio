@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { FiMenu, FiX } from "react-icons/fi";
+import { signOut } from "next-auth/react";
 
 export default function AdminLayout({ children }) {
 
@@ -16,14 +17,22 @@ export default function AdminLayout({ children }) {
         <h2 className="font-bold text-xl mb-6">Admin</h2>
         <nav className="space-y-3 flex flex-col">
           <Link href="/admin">Dashboard</Link>
-          <Link href="/admin/cms">Guest</Link>
-          <Link href="/">logout</Link>
+          <Link href="/admin/cms">Clients</Link>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              signOut({ callbackUrl: "/" });
+            }}
+          >
+            Logout
+          </a>
         </nav>
       </aside>
 
       {/* Mobile navbar */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-gray-900 text-white flex items-center justify-between p-4 z-50">
-        <h2 className="font-bold text-xl">Admin</h2>
+        <h2 className="font-bold text-xl">Admin Dashboard</h2>
         <button onClick={toggleMenu}>
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
@@ -31,11 +40,19 @@ export default function AdminLayout({ children }) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <aside className="md:hidden fixed top-16 left-0 w-full bg-gray-900 text-white p-6 z-40">
+        <aside className="md:hidden fixed top-1 6left-0 w-full bg-gray-900 text-white p-6 z-40">
           <nav className="space-y-3 flex flex-col">
             <Link href="/admin" onClick={toggleMenu}>Dashboard</Link>
-            <Link href="/admin/cms" onClick={toggleMenu}>CMS</Link>
-            <Link href="/" onClick={toggleMenu}>Logout</Link>
+            <Link href="/admin/cms" onClick={toggleMenu}>Clients</Link>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                signOut({ callbackUrl: "/" });
+              }}
+            >
+              Logout
+            </a>
           </nav>
         </aside>
       )}
