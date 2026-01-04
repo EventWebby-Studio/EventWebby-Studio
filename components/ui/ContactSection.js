@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { toast } from "react-hot-toast";
+import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
+  
   const INITIAL_FORM_STATE = {
     name: "",
     email: "",
@@ -40,11 +41,11 @@ export default function ContactSection() {
     const result = await res.json();
 
     if (!result.success) {
-      alert(result.message);
-      // toast.error(result.message)
+      // alert(result.message);
+      toast.error(result.message)
     } else {
-      alert(result.message);
-      // toast.success(result.message)
+      // alert(result.message);
+      toast.success(result.message)
       resetForm();
     }
   };

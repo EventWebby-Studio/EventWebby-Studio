@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Toaster } from "react-hot-toast";
 
 export default function PublicLayout({ children }) {
   // handles the closing of menu
@@ -12,6 +13,7 @@ export default function PublicLayout({ children }) {
 
   return (
     <>
+      <Toaster position="top-right" />
       {/* navigation bar */}
       {/* <nav className="border-b bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
@@ -188,7 +190,7 @@ export default function PublicLayout({ children }) {
 
       <main>{children}</main>
 
-      <footer className="border-t py-6 text-center text-sm text-gray-500 bg-gray-900">
+      <footer className="border-t py-6 text-center text-sm text-white bg-[#E6C27A]">
         © {new Date().getFullYear()} InviteFlow. All rights reserved.
       </footer>
     </>
