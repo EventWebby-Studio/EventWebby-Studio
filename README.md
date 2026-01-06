@@ -761,7 +761,6 @@ git push -u origin main
 
 ## Supabase Postgres x Prisma setup for hosted DB 
 in .env file, after local development all okay, change # DATABASE_URL="file:./prisma/dev.db" to the Supabase connection String under ORMS tab
-DATABASE_URL="postgresql://postgres.vqatmmzdzpruutrvfzyf:Tyz87955747!@aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres"
 
 after u got ur conenction string go to prisma/schema.prisma file and update the datasource to 'postgresql' instead of 'sqlite'
 generator client {
