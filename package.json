@@ -10,6 +10,8 @@
     "prisma": "prisma"
   },
   "dependencies": {
+    "@fontsource/lora": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
     "@prisma/client": "^6.19.1",
     "@tailwindplus/elements": "^1.0.21",
     "bcrypt": "^6.0.0",

@@ -84,7 +84,7 @@ export default function HeroSection() {
             >
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="#"
+                  href="#contact"
                   className="rounded-md animate-bounce bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-[#CFA24D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fad6a5]"
                 >
                   Build My Event Website!

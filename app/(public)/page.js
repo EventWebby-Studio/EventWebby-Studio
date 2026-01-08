@@ -13,7 +13,7 @@ import WordScrollingSection from "@/components/ui/WordScrollingSection";
 import AboutSection from "@/components/ui/AboutSection";
 import GridSection from "@/components/ui/GridSection";
 import ScrollJackedSection from "@/components/ui/ScrollJackedSection";
-
+import FooterSection from "@/components/ui/FooterSection";
 export default function HomePage() {
   return (
     <section className="text-center">
@@ -47,6 +47,7 @@ export default function HomePage() {
 
 
       {/* <RsvpForm></RsvpForm> */}
+      <FooterSection></FooterSection>
     </section>
   )
 }

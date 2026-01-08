@@ -59,6 +59,9 @@ npm install react-hot-toast
 ## to use scss u need npm install smth
 npm install sass
 
+## font
+npm install @fontsource/playfair-display @fontsource/lora
+
 ## .env file
 DATABASE_URL="file:./prisma/dev.db"
 NEXTAUTH_SECRET="dev-secret-change-later"

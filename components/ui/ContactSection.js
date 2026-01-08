@@ -60,10 +60,10 @@ export default function ContactSection() {
       <div className="max-w-lg mx-auto bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-center text-[#3A2B1F] mb-2">
-            RSVP NOW
+            Every Event Has a Story
           </h2>
           <p className="text-center text-gray-500 mb-6">
-            Let us know you’re coming!
+            Tell us about yours — we’ll turn it into a beautifully crafted event website your guests will love.
           </p>
         </div>
 
