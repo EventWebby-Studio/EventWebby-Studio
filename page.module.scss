@@ -19,3 +19,10 @@
     }
   }
 }
+
+@media (max-width: 933px) and (orientation: landscape) {
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}

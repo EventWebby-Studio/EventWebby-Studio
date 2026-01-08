@@ -22,11 +22,11 @@ export default function ScrollJackedSection() {
   return (
     <section className="relative bg-[#F6F1E9]">
       {/* Spacer before section */}
-      <div className="h-[10vh]" />
+      {/* <div className="h-[10dvh]" /> */}
 
       {/* Sticky / scroll-jacked section */}
-      <div ref={containerRef} className="relative h-[200vh]">
-        <div className="sticky top-0 h-screen flex items-center">
+      <div ref={containerRef} className="relative h-[220dvh] md:h-[200dvh]">
+        <div className="sticky top-0 min-h-[100dvh] flex items-center">
           <div className="mx-auto max-w-2xl lg:max-w-7xl px-6">
             <motion.p className={styles.paragraph}>
               {words.map((word, i) => {
@@ -49,7 +49,7 @@ export default function ScrollJackedSection() {
       </div>
 
       {/* Spacer after section */}
-      <div className="h-[10vh]" />
+      {/* <div className="h-[10dvh]" /> */}
     </section>
   );
 }
