@@ -2,7 +2,7 @@ import { prisma } from "../../../../lib/prisma";
 import Link from "next/link";
 import ClientsTable from "../../../../components/layout/ClientsTable";
 
-export default async function CMSPage() {
+export default async function ClientsPage() {
 
   const clients = await prisma.client.findMany({
     orderBy: { createdAt: "desc" },

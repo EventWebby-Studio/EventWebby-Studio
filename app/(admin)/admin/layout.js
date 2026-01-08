@@ -17,7 +17,7 @@ export default function AdminLayout({ children }) {
         <h2 className="font-bold text-xl mb-6">Admin</h2>
         <nav className="space-y-3 flex flex-col">
           <Link href="/admin">Dashboard</Link>
-          <Link href="/admin/cms">Clients</Link>
+          <Link href="/admin/clients">Clients</Link>
           <a
             href="#"
             onClick={(e) => {
@@ -43,7 +43,7 @@ export default function AdminLayout({ children }) {
         <aside className="md:hidden fixed top-1 6left-0 w-full bg-gray-900 text-white p-6 z-40">
           <nav className="space-y-3 flex flex-col">
             <Link href="/admin" onClick={toggleMenu}>Dashboard</Link>
-            <Link href="/admin/cms" onClick={toggleMenu}>Clients</Link>
+            <Link href="/admin/clients" onClick={toggleMenu}>Clients</Link>
             <a
               href="#"
               onClick={(e) => {
