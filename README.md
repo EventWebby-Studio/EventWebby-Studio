@@ -779,3 +779,34 @@ once all set, just run npx prisma db push, and check that the table is created i
 npx prisma db push
 
 test commit
+
+
+
+<!--  if there is new changes to the DB schema, follow the steps below -->
+Edit schema.prisma
+        ↓
+prisma migrate dev   ← creates migrations
+        ↓
+git commit
+        ↓
+git push
+        ↓
+prisma migrate deploy ← applies them elsewhere
+
+✅ Flow A: Solo dev (recommended for you now)
+1️⃣ Locally (dev machine)
+# schema change
+npx prisma migrate dev
+
+# commit
+git add prisma
+git commit -m "Add new schema"
+git push
+
+2️⃣ Still locally, but using PROD env
+# point env to production Supabase
+npx prisma migrate deploy
+
+
+Done ✅
+Then Vercel deploys app.
