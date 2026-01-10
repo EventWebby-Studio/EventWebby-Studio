@@ -810,3 +810,91 @@ npx prisma migrate deploy
 
 Done ✅
 Then Vercel deploys app.
+
+## Important take note, to fix Prisma and Nextjs: content is not updating until re-deploy, this is because You are using Next.js 13+ / App Router (since you have export default async function ClientsPage) and fetching directly in the page component. By default, in the App Router: Page components are server components and cached by Next.js. Server components don’t refetch on every request unless you tell Next.js to do so. That’s why your database updates don’t show until you re-deploy — the page is served from cache
+
+In Next.js App Router:
+
+export default async function ClientsPage() {
+  const clients = await prisma.client.findMany();
+  return <ClientsTable clients={clients} />;
+}
+
+Next.js treats this as a static, cached server render by default
+
+The data is fetched at build time (or first render) → cached in server memory / ISR
+
+Any new database records won’t appear until revalidation or re-deploy
+
+## Fix 1
+2️⃣ How to fix: force dynamic rendering / revalidation
+Option A: Mark the page as dynamic
+export const dynamic = "force-dynamic"; // add at top of your file
+
+export default async function ClientsPage() {
+  const clients = await prisma.client.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  return (
+    <div>
+      <div className="flex justify-between mb-6">
+        <h1 className="text-2xl font-bold text-black mt-10 sm:mt-0">Client Interest Application</h1>
+      </div>
+      <ClientsTable clients={clients} />
+    </div>
+  );
+}
+
+
+✅ force-dynamic tells Next.js:
+
+Don’t cache this page at build time
+
+Fetch fresh data on every request
+
+## Fix 2 
+Option B: Use revalidate for ISR (Incremental Static Regeneration)
+
+If you want some caching but auto-refresh after N seconds:
+
+export const revalidate = 10; // seconds
+
+export default async function ClientsPage() {
+  const clients = await prisma.client.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  return <ClientsTable clients={clients} />;
+}
+
+
+Page is statically generated at request but revalidates after 10s
+
+Useful if you don’t need “instant” updates
+
+## Fix 3
+Option C: Fetch on client side (React component)
+
+Another approach is fetch data on the client side, so your page always shows the latest data:
+
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function ClientsPage() {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/clients")
+      .then(res => res.json())
+      .then(data => setClients(data));
+  }, []);
+
+  return <ClientsTable clients={clients} />;
+}
+
+
+Your /api/clients API route fetches via Prisma
+
+Ensures data is always fresh without needing to re-deploy
