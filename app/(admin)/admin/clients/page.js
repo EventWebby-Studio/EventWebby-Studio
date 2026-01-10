@@ -8,7 +8,7 @@ export default async function ClientsPage() {
     orderBy: { createdAt: "desc" },
   });
 
-  console.log(clients);
+  console.log("Checking clients: " + clients);
 
   return (
     <div>
